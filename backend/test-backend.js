@@ -17,8 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // ===== MongoDB connection =====
-const MONGO_URI =
-  "mongodb+srv://punith:Punith123@cluster0.ad4kmh1.mongodb.net/brain_db?retryWrites=true&w=majority";
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
   .connect(MONGO_URI)
